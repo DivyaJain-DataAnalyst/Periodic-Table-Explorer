@@ -1,16 +1,16 @@
 const getBlockColor = (block) => {
-    switch (block) {
-      case "s":
-        return "skyblue"; // Yellow for s-block
-      case "p":
-        return "green"; // Sky blue for p-block
-      case "d":
-        return "orange"; // Salmon for d-block
-      case "f":
-        return "purple"; // Orchid for f-block
-      default:
-        return "white"; // White for undefined blocks
-    }
-  };
+  switch (block) {
+    case "s":
+      return "#7dd3fc"; // Sky blue for s-block
+    case "p":
+      return "#4ade80"; // Green for p-block
+    case "d":
+      return "#fbbf24"; // Amber for d-block
+    case "f":
+      return "#a78bfa"; // Purple for f-block
+    default:
+      return "#94a3b8"; // Slate for undefined blocks
+  }
+};
 
 export default getBlockColor;

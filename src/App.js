@@ -1,10 +1,9 @@
-import PeriodicTable from "./Components/PerodicTable";
-
+import PeriodicTable from "./Components/PeriodicTable";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-center"><u>Periodic Table Explorer</u></h1>
+    <div className="app">
+      <h1 className="text-center">Periodic Table Explorer</h1>
       <PeriodicTable />
     </div>
   );
