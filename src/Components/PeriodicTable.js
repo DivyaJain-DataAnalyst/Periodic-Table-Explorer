@@ -43,6 +43,11 @@ const PeriodicTable = () => {
     }
   }, []);
 
+   const getElementGalleryUrl = useCallback((element) => {
+    const query = encodeURIComponent(`${element.name} element`);
+    return `https://commons.wikimedia.org/w/index.php?search=${query}&title=Special:MediaSearch&type=image`;
+  }, []);
+
   // Determine if an element matches current search + filters
   const isElementVisible = useCallback(
     (element) => {
@@ -259,6 +264,15 @@ const PeriodicTable = () => {
                 </div>
               )}
             </div>
+
+            <a
+              className="details-gallery-btn"
+              href={getElementGalleryUrl(selectedElement)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View {selectedElement.name} Gallery
+            </a>
 
             {selectedElement.summary && (
               <p className="details-summary">{selectedElement.summary}</p>
