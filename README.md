@@ -1,5 +1,13 @@
 # Periodic Table Explorer
 
+## 🏆 NSoC'26 Selected Project
+
+This project has been selected for the **Nexus Spring of Code** program.
+
+We welcome contributions from NSoC participants.
+If you're an NSOC contributor, please check the [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
+
 **Periodic Table Explorer** is an interactive React-based web application that visually represents the periodic table of elements. It is designed to make learning chemistry intuitive and engaging through a clean, interactive interface.
 
 ## Features
