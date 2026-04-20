@@ -6,9 +6,10 @@ import { getMainElements, getLanthanides, getActinides } from "./filterBlocks";
 import SmallBox from "./SmallBox";
 import SearchBar from "./SearchBar";
 import FilterPanel, { classifyElement } from "./FilterPanel";
+import { useElement } from "../contexts/ElementContext";
 
 const PeriodicTable = () => {
-  const [selectedElement, setSelectedElement] = useState(null);
+  const { selectedElement, setSelectedElement } = useElement();
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState({
     type: "all",
@@ -46,7 +47,7 @@ const PeriodicTable = () => {
       ref.classList.add("element-pulse");
       setTimeout(() => ref.classList.remove("element-pulse"), 1200);
     }
-  }, []);
+  }, [setSelectedElement]);
     // Tooltip handlers
    const showTooltip = useCallback((element, event) => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
